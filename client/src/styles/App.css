@@ -175,20 +175,3 @@ input[type='radio']:checked ~ .text-primary {
 .checked::before {
   background: var(--primary-color);
 }
-
-/* ============= Media Queries (Medium Devices) ============== */
-@media screen and (max-width: 1024px) {
-  .container {
-    width: var(--container-width-md);
-  }
-}
-
-/* ============= Media Queries (Small Devices) ============== */
-@media screen and (max-width: 600px) {
-  .container .title {
-    width: 80%;
-  }
-  .container > {
-    width: 80%;
-  }
-}

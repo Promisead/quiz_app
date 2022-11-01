@@ -26,14 +26,16 @@ export default function ResultTable() {
         </thead>
         <tbody>
           {!data ?? <div>No Data Found </div>}
-          {data.map((v, i) => (
-            <tr className="table-body" key={i}>
-              <td>{v?.username || ''}</td>
-              <td>{v?.attempts || 0}</td>
-              <td>{v?.points || 0}</td>
-              <td>{v?.achived || ''}</td>
-            </tr>
-          ))}
+          {data
+            .map((v, i) => (
+              <tr className="table-body" key={i}>
+                <td>{v?.username || ''}</td>
+                <td>{v?.attempts || 0}</td>
+                <td>{v?.points || 0}</td>
+                <td>{v?.achived || ''}</td>
+              </tr>
+            ))
+            .reverse()}
         </tbody>
       </table>
     </div>
